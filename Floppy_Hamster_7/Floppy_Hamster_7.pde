@@ -130,6 +130,8 @@ void setup() {
   }
   //Iniciar juego
   estado = "Inicio";
+  inicio.loop();
+  inicio.amp(0.5);
 }
 
 void draw() {
@@ -218,8 +220,6 @@ void keyPressed() {
   switch(estado) {
   case "Inicio":
     if (key == ENTER) {
-      inicio.loop();
-      inicio.amp(0.5);
       estado = "Instruc";
     }
     break;
@@ -238,11 +238,15 @@ void keyPressed() {
   case "Perdiste":
     if (key == ENTER) {
       estado = "Inicio";
+      inicio.loop();
+      inicio.amp(0.5);
     }
     break;
   case "Ganaste":
     if (key==ENTER) {
       estado="Inicio";
+      inicio.loop();
+      inicio.amp(0.5);
     }
     break;
   }
